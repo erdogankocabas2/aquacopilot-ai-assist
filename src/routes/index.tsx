@@ -52,23 +52,24 @@ const segments = [
 const pains = [
   { icon: Beaker, title: "Cycling & setup confusion",
     body: "Beginners get conflicting advice and struggle to interpret ammonia, nitrite, and nitrate during the first weeks.",
-    ev: "Reddit r/Aquariums beginner cycling threads [S4][S5]" },
+    ev: "Reddit r/Aquariums beginner cycling threads" },
   { icon: Leaf, title: "Algae & tank balance",
     body: "Planted tank owners juggle light, CO₂, ferts, and water changes without knowing which lever to pull first.",
-    ev: "r/PlantedTank + Buce Plant / Aquarium Co-Op guides [S6][S7][S13][S14]" },
+    ev: "r/PlantedTank, Buce Plant & Aquarium Co-Op guides" },
   { icon: Droplets, title: "Water tests are hard to interpret",
     body: "Color-based test kits are ambiguous, and readings rarely translate into a clear next action.",
-    ev: "Forum threads on test reading + app reviews [S4][S18][S22]" },
+    ev: "Forum threads on test reading & app reviews" },
   { icon: CalendarCheck, title: "Maintenance is repetitive & easy to delay",
     body: "Water changes, top-offs, filter and glass cleaning pile up across reminders, notebooks, and memory.",
-    ev: "Aquarium Co-Op maintenance guidance + community [S13][S18]" },
+    ev: "Aquarium Co-Op maintenance guidance & community" },
   { icon: Activity, title: "Reef stability is cognitively heavy",
     body: "Reef owners must hold salinity, alkalinity, calcium, magnesium, NO₃, PO₄, and dosing in their head simultaneously.",
-    ev: "Bulk Reef Supply + Reef2Reef threads [S15][S16][S17]" },
+    ev: "Bulk Reef Supply & Reef2Reef threads" },
   { icon: Layers, title: "Existing tools are fragmented",
     body: "Owners stitch together notebooks, spreadsheets, forum searches, reminders, and hardware apps.",
-    ev: "Aquarimate, Aquarium Log, Apex Fusion, Seneye, ReefBeat reviews [S21]–[S29]" },
+    ev: "Aquarimate, Aquarium Log, Apex Fusion, Seneye, ReefBeat reviews" },
 ];
+
 
 const screens = [
   { icon: Activity, name: "Daily Tank Dashboard", body: "Today's status, anomalies, and the single most important next action." },
