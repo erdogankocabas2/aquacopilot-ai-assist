@@ -27,30 +27,27 @@ const segments = [
     behavior: "Set up first tank from store advice; uneven testing cadence.",
     pain: "Cycling confusion; conflicting advice on ammonia/nitrite/nitrate.",
     why: "Largest US base (~10M households) — the broad onboarding wedge.",
-    cite: "[S1][S4][S5]",
   },
   {
     icon: Leaf, title: "Planted Tank Hobbyists", tag: "Engaged",
     behavior: "Tune light, CO₂, ferts; chase algae and plant growth balance.",
     pain: "Algae is a multivariable balance problem, not a single fix.",
     why: "High retention; need ranked action plans, not more articles.",
-    cite: "[S6][S7][S13][S14]",
   },
   {
     icon: Waves, title: "Reef / Saltwater Owners", tag: "High value",
     behavior: "Manage salinity, alk, Ca, Mg, NO₃, PO₄; dose and log daily.",
     pain: "Reef stability is cognitively heavy; small drift = big risk.",
     why: "~2M US households, higher spend, premium intelligence buyers.",
-    cite: "[S1][S15][S16][S17]",
   },
   {
     icon: Layers, title: "Advanced Multi-Tank Owners", tag: "Power user",
     behavior: "Run several tanks; track logs in spreadsheets/notebooks.",
     pain: "Fragmented tools; no cross-tank trend layer.",
     why: "Unified, intelligent log layer is unmet need.",
-    cite: "[S18][S19]",
   },
 ];
+
 
 const pains = [
   { icon: Beaker, title: "Cycling & setup confusion",
