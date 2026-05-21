@@ -252,7 +252,8 @@ function LandingPage() {
 
       {/* Concept */}
       <Section id="concept" kicker="App Concept" title="Meet Aquarium Copilot" sub="A camera-first, context-aware AI copilot that helps aquarium owners scan, interpret, plan, and act — across one or many tanks.">
-        <div className="grid lg:grid-cols-5 gap-5">
+        <PhoneMockup />
+        <div className="grid lg:grid-cols-5 gap-5 mt-16">
           {screens.map((s, i) => (
             <div key={s.name} className={`glass rounded-2xl p-6 shadow-card ${i === 0 ? "lg:row-span-2 lg:col-span-2" : ""}`}>
               <div className="flex items-center gap-3">
