@@ -146,6 +146,87 @@ function Section({ id, kicker, title, sub, children }: { id?: string; kicker?: s
   );
 }
 
+function PhoneMockup() {
+  return (
+    <div className="relative mx-auto max-w-5xl grid lg:grid-cols-2 gap-10 items-center mb-4">
+      <div className="order-2 lg:order-1">
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4">
+          <Sparkles className="h-3.5 w-3.5" /> Product Mockup
+        </div>
+        <h3 className="text-2xl md:text-3xl font-semibold leading-tight">One glance. One next action.</h3>
+        <p className="mt-3 text-muted-foreground">A simplified preview of the daily Tank Dashboard: live parameters, anomaly detection, and a single AI-ranked next step — instead of a wall of numbers.</p>
+        <ul className="mt-5 space-y-2 text-sm">
+          {["Camera-first water test scanning","Context-aware anomaly highlighting","Cited, ranked next actions","Adaptive maintenance reminders"].map(x => (
+            <li key={x} className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /><span className="text-muted-foreground">{x}</span></li>
+          ))}
+        </ul>
+      </div>
+      <div className="order-1 lg:order-2 flex justify-center">
+        <div className="relative">
+          <div className="absolute -inset-6 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
+          <div className="relative w-[280px] h-[570px] rounded-[2.75rem] bg-gradient-to-b from-slate-900 to-slate-950 p-3 shadow-glow ring-1 ring-primary/20">
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-slate-950 z-10" />
+            <div className="relative h-full w-full rounded-[2.25rem] bg-background overflow-hidden flex flex-col">
+              <div className="px-5 pt-8 pb-3 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Reef · 75g</div>
+                  <div className="text-base font-semibold">Good morning, Alex</div>
+                </div>
+                <div className="h-9 w-9 rounded-full bg-gradient-primary grid place-items-center shadow-glow">
+                  <Droplets className="h-4 w-4 text-primary-foreground" />
+                </div>
+              </div>
+
+              <div className="mx-4 mt-1 rounded-2xl bg-gradient-primary p-4 text-primary-foreground shadow-glow">
+                <div className="flex items-center justify-between text-[10px] uppercase tracking-wider opacity-80">
+                  <span>Tank Health</span><span>Live</span>
+                </div>
+                <div className="mt-1 text-3xl font-semibold">92<span className="text-base opacity-80">/100</span></div>
+                <div className="text-xs opacity-90 mt-0.5">Stable · 1 minor alert</div>
+              </div>
+
+              <div className="mx-4 mt-3 grid grid-cols-2 gap-2">
+                {[
+                  { k: "Salinity", v: "1.025", ok: true },
+                  { k: "Alkalinity", v: "8.4 dKH", ok: true },
+                  { k: "Nitrate", v: "12 ppm", ok: false },
+                  { k: "Calcium", v: "430 ppm", ok: true },
+                ].map(r => (
+                  <div key={r.k} className="rounded-xl border border-border bg-card/60 px-3 py-2">
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">{r.k}</div>
+                    <div className={`text-sm font-mono mt-0.5 ${r.ok ? "text-foreground" : "text-accent"}`}>{r.v}{!r.ok && " ↑"}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mx-4 mt-3 rounded-xl bg-primary/10 border border-primary/30 p-3">
+                <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-primary font-semibold">
+                  <Sparkles className="h-3 w-3" /> Next Action
+                </div>
+                <p className="mt-1 text-xs text-foreground">Increase weekly water change by 5%. Recheck NO₃ in 48h.</p>
+              </div>
+
+              <div className="mt-auto mx-4 mb-5 grid grid-cols-4 gap-1 rounded-2xl bg-card/80 border border-border p-2">
+                {[
+                  { i: Activity, label: "Today" },
+                  { i: ScanLine, label: "Scan" },
+                  { i: LineChart, label: "Trends" },
+                  { i: BookOpen, label: "Guide" },
+                ].map((t, idx) => (
+                  <div key={t.label} className={`flex flex-col items-center gap-0.5 py-1.5 rounded-xl ${idx === 0 ? "bg-primary/15 text-primary" : "text-muted-foreground"}`}>
+                    <t.i className="h-4 w-4" />
+                    <span className="text-[9px]">{t.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
