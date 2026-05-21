@@ -183,10 +183,10 @@ function LandingPage() {
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
             {[
-              { k: "~10M", v: "US freshwater households [S1]" },
-              { k: "~2M", v: "US saltwater households [S1]" },
-              { k: "4", v: "Behavioral segments [S13]" },
-              { k: "6", v: "Recurring pain points [S4]" },
+              { k: "~10M", v: "US freshwater households" },
+              { k: "~2M", v: "US saltwater households" },
+              { k: "4", v: "Behavioral segments" },
+              { k: "6", v: "Recurring pain points" },
             ].map(s => (
               <div key={s.k} className="glass rounded-2xl p-4 shadow-card">
                 <div className="text-2xl md:text-3xl font-semibold text-gradient">{s.k}</div>
