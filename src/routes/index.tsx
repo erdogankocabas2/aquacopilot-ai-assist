@@ -212,7 +212,7 @@ function LandingPage() {
                 <div><dt className="text-muted-foreground text-xs uppercase tracking-wider">Main pain</dt><dd>{s.pain}</dd></div>
                 <div><dt className="text-muted-foreground text-xs uppercase tracking-wider">Why they matter</dt><dd>{s.why}</dd></div>
               </dl>
-              <div className="mt-4 text-[11px] text-primary/80 font-mono">{s.cite}</div>
+              
             </div>
           ))}
         </div>
