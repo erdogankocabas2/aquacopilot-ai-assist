@@ -246,7 +246,7 @@ function LandingPage() {
             <span className="text-sm text-muted-foreground">The real gap is not tracking. </span>
             <span className="text-sm font-semibold text-primary">It is interpretation.</span>
           </div>
-          <div className="mt-4 text-xs text-muted-foreground font-mono">[S4][S8][S9][S17][S18]</div>
+          
         </div>
       </section>
 
