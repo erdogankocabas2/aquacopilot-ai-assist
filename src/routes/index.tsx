@@ -27,51 +27,49 @@ const segments = [
     behavior: "Set up first tank from store advice; uneven testing cadence.",
     pain: "Cycling confusion; conflicting advice on ammonia/nitrite/nitrate.",
     why: "Largest US base (~10M households) — the broad onboarding wedge.",
-    cite: "[S1][S4][S5]",
   },
   {
     icon: Leaf, title: "Planted Tank Hobbyists", tag: "Engaged",
     behavior: "Tune light, CO₂, ferts; chase algae and plant growth balance.",
     pain: "Algae is a multivariable balance problem, not a single fix.",
     why: "High retention; need ranked action plans, not more articles.",
-    cite: "[S6][S7][S13][S14]",
   },
   {
     icon: Waves, title: "Reef / Saltwater Owners", tag: "High value",
     behavior: "Manage salinity, alk, Ca, Mg, NO₃, PO₄; dose and log daily.",
     pain: "Reef stability is cognitively heavy; small drift = big risk.",
     why: "~2M US households, higher spend, premium intelligence buyers.",
-    cite: "[S1][S15][S16][S17]",
   },
   {
     icon: Layers, title: "Advanced Multi-Tank Owners", tag: "Power user",
     behavior: "Run several tanks; track logs in spreadsheets/notebooks.",
     pain: "Fragmented tools; no cross-tank trend layer.",
     why: "Unified, intelligent log layer is unmet need.",
-    cite: "[S18][S19]",
   },
 ];
+
 
 const pains = [
   { icon: Beaker, title: "Cycling & setup confusion",
     body: "Beginners get conflicting advice and struggle to interpret ammonia, nitrite, and nitrate during the first weeks.",
-    ev: "Reddit r/Aquariums beginner cycling threads [S4][S5]" },
+    ev: "Reddit r/Aquariums beginner cycling threads" },
   { icon: Leaf, title: "Algae & tank balance",
     body: "Planted tank owners juggle light, CO₂, ferts, and water changes without knowing which lever to pull first.",
-    ev: "r/PlantedTank + Buce Plant / Aquarium Co-Op guides [S6][S7][S13][S14]" },
+    ev: "r/PlantedTank, Buce Plant & Aquarium Co-Op guides" },
   { icon: Droplets, title: "Water tests are hard to interpret",
     body: "Color-based test kits are ambiguous, and readings rarely translate into a clear next action.",
-    ev: "Forum threads on test reading + app reviews [S4][S18][S22]" },
+    ev: "Forum threads on test reading & app reviews" },
   { icon: CalendarCheck, title: "Maintenance is repetitive & easy to delay",
     body: "Water changes, top-offs, filter and glass cleaning pile up across reminders, notebooks, and memory.",
-    ev: "Aquarium Co-Op maintenance guidance + community [S13][S18]" },
+    ev: "Aquarium Co-Op maintenance guidance & community" },
   { icon: Activity, title: "Reef stability is cognitively heavy",
     body: "Reef owners must hold salinity, alkalinity, calcium, magnesium, NO₃, PO₄, and dosing in their head simultaneously.",
-    ev: "Bulk Reef Supply + Reef2Reef threads [S15][S16][S17]" },
+    ev: "Bulk Reef Supply & Reef2Reef threads" },
   { icon: Layers, title: "Existing tools are fragmented",
     body: "Owners stitch together notebooks, spreadsheets, forum searches, reminders, and hardware apps.",
-    ev: "Aquarimate, Aquarium Log, Apex Fusion, Seneye, ReefBeat reviews [S21]–[S29]" },
+    ev: "Aquarimate, Aquarium Log, Apex Fusion, Seneye, ReefBeat reviews" },
 ];
+
 
 const screens = [
   { icon: Activity, name: "Daily Tank Dashboard", body: "Today's status, anomalies, and the single most important next action." },
@@ -148,6 +146,87 @@ function Section({ id, kicker, title, sub, children }: { id?: string; kicker?: s
   );
 }
 
+function PhoneMockup() {
+  return (
+    <div className="relative mx-auto max-w-5xl grid lg:grid-cols-2 gap-10 items-center mb-4">
+      <div className="order-2 lg:order-1">
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4">
+          <Sparkles className="h-3.5 w-3.5" /> Product Mockup
+        </div>
+        <h3 className="text-2xl md:text-3xl font-semibold leading-tight">One glance. One next action.</h3>
+        <p className="mt-3 text-muted-foreground">A simplified preview of the daily Tank Dashboard: live parameters, anomaly detection, and a single AI-ranked next step — instead of a wall of numbers.</p>
+        <ul className="mt-5 space-y-2 text-sm">
+          {["Camera-first water test scanning","Context-aware anomaly highlighting","Cited, ranked next actions","Adaptive maintenance reminders"].map(x => (
+            <li key={x} className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /><span className="text-muted-foreground">{x}</span></li>
+          ))}
+        </ul>
+      </div>
+      <div className="order-1 lg:order-2 flex justify-center">
+        <div className="relative">
+          <div className="absolute -inset-6 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
+          <div className="relative w-[280px] h-[570px] rounded-[2.75rem] bg-gradient-to-b from-slate-900 to-slate-950 p-3 shadow-glow ring-1 ring-primary/20">
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-slate-950 z-10" />
+            <div className="relative h-full w-full rounded-[2.25rem] bg-background overflow-hidden flex flex-col">
+              <div className="px-5 pt-8 pb-3 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Reef · 75g</div>
+                  <div className="text-base font-semibold">Good morning, Alex</div>
+                </div>
+                <div className="h-9 w-9 rounded-full bg-gradient-primary grid place-items-center shadow-glow">
+                  <Droplets className="h-4 w-4 text-primary-foreground" />
+                </div>
+              </div>
+
+              <div className="mx-4 mt-1 rounded-2xl bg-gradient-primary p-4 text-primary-foreground shadow-glow">
+                <div className="flex items-center justify-between text-[10px] uppercase tracking-wider opacity-80">
+                  <span>Tank Health</span><span>Live</span>
+                </div>
+                <div className="mt-1 text-3xl font-semibold">92<span className="text-base opacity-80">/100</span></div>
+                <div className="text-xs opacity-90 mt-0.5">Stable · 1 minor alert</div>
+              </div>
+
+              <div className="mx-4 mt-3 grid grid-cols-2 gap-2">
+                {[
+                  { k: "Salinity", v: "1.025", ok: true },
+                  { k: "Alkalinity", v: "8.4 dKH", ok: true },
+                  { k: "Nitrate", v: "12 ppm", ok: false },
+                  { k: "Calcium", v: "430 ppm", ok: true },
+                ].map(r => (
+                  <div key={r.k} className="rounded-xl border border-border bg-card/60 px-3 py-2">
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">{r.k}</div>
+                    <div className={`text-sm font-mono mt-0.5 ${r.ok ? "text-foreground" : "text-accent"}`}>{r.v}{!r.ok && " ↑"}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mx-4 mt-3 rounded-xl bg-primary/10 border border-primary/30 p-3">
+                <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-primary font-semibold">
+                  <Sparkles className="h-3 w-3" /> Next Action
+                </div>
+                <p className="mt-1 text-xs text-foreground">Increase weekly water change by 5%. Recheck NO₃ in 48h.</p>
+              </div>
+
+              <div className="mt-auto mx-4 mb-5 grid grid-cols-4 gap-1 rounded-2xl bg-card/80 border border-border p-2">
+                {[
+                  { i: Activity, label: "Today" },
+                  { i: ScanLine, label: "Scan" },
+                  { i: LineChart, label: "Trends" },
+                  { i: BookOpen, label: "Guide" },
+                ].map((t, idx) => (
+                  <div key={t.label} className={`flex flex-col items-center gap-0.5 py-1.5 rounded-xl ${idx === 0 ? "bg-primary/15 text-primary" : "text-muted-foreground"}`}>
+                    <t.i className="h-4 w-4" />
+                    <span className="text-[9px]">{t.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -185,10 +264,10 @@ function LandingPage() {
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
             {[
-              { k: "~10M", v: "US freshwater households [S1]" },
-              { k: "~2M", v: "US saltwater households [S1]" },
-              { k: "4", v: "Behavioral segments [S13]" },
-              { k: "6", v: "Recurring pain points [S4]" },
+              { k: "~10M", v: "US freshwater households" },
+              { k: "~2M", v: "US saltwater households" },
+              { k: "4", v: "Behavioral segments" },
+              { k: "6", v: "Recurring pain points" },
             ].map(s => (
               <div key={s.k} className="glass rounded-2xl p-4 shadow-card">
                 <div className="text-2xl md:text-3xl font-semibold text-gradient">{s.k}</div>
@@ -214,7 +293,7 @@ function LandingPage() {
                 <div><dt className="text-muted-foreground text-xs uppercase tracking-wider">Main pain</dt><dd>{s.pain}</dd></div>
                 <div><dt className="text-muted-foreground text-xs uppercase tracking-wider">Why they matter</dt><dd>{s.why}</dd></div>
               </dl>
-              <div className="mt-4 text-[11px] text-primary/80 font-mono">{s.cite}</div>
+              
             </div>
           ))}
         </div>
@@ -248,13 +327,14 @@ function LandingPage() {
             <span className="text-sm text-muted-foreground">The real gap is not tracking. </span>
             <span className="text-sm font-semibold text-primary">It is interpretation.</span>
           </div>
-          <div className="mt-4 text-xs text-muted-foreground font-mono">[S4][S8][S9][S17][S18]</div>
+          
         </div>
       </section>
 
       {/* Concept */}
       <Section id="concept" kicker="App Concept" title="Meet Aquarium Copilot" sub="A camera-first, context-aware AI copilot that helps aquarium owners scan, interpret, plan, and act — across one or many tanks.">
-        <div className="grid lg:grid-cols-5 gap-5">
+        <PhoneMockup />
+        <div className="grid lg:grid-cols-5 gap-5 mt-16">
           {screens.map((s, i) => (
             <div key={s.name} className={`glass rounded-2xl p-6 shadow-card ${i === 0 ? "lg:row-span-2 lg:col-span-2" : ""}`}>
               <div className="flex items-center gap-3">
@@ -278,7 +358,7 @@ function LandingPage() {
                   ))}
                   <div className="mt-3 rounded-lg bg-primary/10 border border-primary/30 p-3 text-xs">
                     <div className="font-semibold text-primary flex items-center gap-1.5"><Sparkles className="h-3.5 w-3.5" /> Next action</div>
-                    <p className="mt-1 text-muted-foreground">Increase weekly water change by 5%; recheck NO₃ in 48h. <span className="text-primary">Why? [S15][S16]</span></p>
+                    <p className="mt-1 text-muted-foreground">Increase weekly water change by 5%; recheck NO₃ in 48h.</p>
                   </div>
                 </div>
               )}
