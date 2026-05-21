@@ -276,7 +276,7 @@ function LandingPage() {
                   ))}
                   <div className="mt-3 rounded-lg bg-primary/10 border border-primary/30 p-3 text-xs">
                     <div className="font-semibold text-primary flex items-center gap-1.5"><Sparkles className="h-3.5 w-3.5" /> Next action</div>
-                    <p className="mt-1 text-muted-foreground">Increase weekly water change by 5%; recheck NO₃ in 48h. <span className="text-primary">Why? [S15][S16]</span></p>
+                    <p className="mt-1 text-muted-foreground">Increase weekly water change by 5%; recheck NO₃ in 48h.</p>
                   </div>
                 </div>
               )}
