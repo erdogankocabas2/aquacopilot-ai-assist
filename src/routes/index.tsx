@@ -164,8 +164,8 @@ function PhoneMockup() {
       <div className="order-1 lg:order-2 flex justify-center">
         <div className="relative">
           <div className="absolute -inset-6 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
-          <div className="relative w-[280px] h-[570px] rounded-[2.75rem] bg-gradient-to-b from-slate-900 to-slate-950 p-3 shadow-glow ring-1 ring-primary/20">
-            <div className="absolute top-3 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-slate-950 z-10" />
+          <div className="relative w-[280px] h-[570px] rounded-[2.75rem] bg-gradient-to-b from-gray-200 to-gray-300 p-3 shadow-glow ring-1 ring-primary/20">
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-300 z-10" />
             <div className="relative h-full w-full rounded-[2.25rem] bg-background overflow-hidden flex flex-col">
               <div className="px-5 pt-8 pb-3 flex items-center justify-between">
                 <div>
@@ -246,8 +246,8 @@ function LandingPage() {
 
       {/* Hero */}
       <section id="top" className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-hero">
-        <img src={heroImg} alt="" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+        <img src={heroImg} alt="" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
         <div className="relative mx-auto max-w-7xl px-6 md:px-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-6">
             <Sparkles className="h-3.5 w-3.5" /> Scate AI · Case Study Submission
